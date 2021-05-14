@@ -1,0 +1,22 @@
+<div class="col-12">
+  <form (ngSubmit)="onSubmit(f)" #f= "ngForm">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" name="name" ngModel required>
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea name="description" id="description" cols="30" rows="10" class="form-control" ngModel required>
+      </textarea>
+    </div>
+    <div class="form-group">
+      <label for="price">Price</label>
+      <input type="number" class="form-control" name="price" ngModel required>
+    </div>
+    <div class="form-group">
+      <label for="imageUrl">Photo</label>
+      <input type="file" class="form-control" name="imageUrl" ngModel required>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled] ="f.invalid">Add new hostel</button>
+  </form>
+</div>
